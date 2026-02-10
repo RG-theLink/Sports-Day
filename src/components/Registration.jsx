@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { ClipboardList, ExternalLink, DollarSign, FileText, Wallet, MapPin } from 'lucide-react'
+import { ClipboardList, ExternalLink, DollarSign, FileText, Wallet, MapPin, Mail, Phone } from 'lucide-react'
 import ParticleCanvas from './ParticleCanvas'
 
 const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/your-form-id/viewform'
@@ -197,6 +197,34 @@ export default function Registration() {
                         </p>
                       </div>
                     </motion.div>
+                  </div>
+                </motion.div>
+
+                {/* Contact / Questions */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="rounded-xl bg-navy-900/50 border border-white/5 p-5 mb-8 text-center"
+                >
+                  <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">Have Questions?</p>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a
+                      href="mailto:school.office@swakopca.edu.na"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span className="text-sm font-medium">school.office@swakopca.edu.na</span>
+                    </a>
+                    <span className="hidden sm:inline text-gray-600">|</span>
+                    <a
+                      href="tel:+26464404605"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+                    >
+                      <Phone className="w-4 h-4" />
+                      <span className="text-sm font-medium">+264 64 404 605</span>
+                    </a>
                   </div>
                 </motion.div>
 
