@@ -31,8 +31,8 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 sm:h-22">
+      <div className="max-w-[90rem] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="group-hover:scale-110 transition-transform">
@@ -44,19 +44,19 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-1.5">
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 rounded-lg text-sm sm:text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200"
+                className="px-5 py-2.5 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#register"
-              className="ml-4 px-6 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-dark text-navy-900 text-sm sm:text-base font-bold hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all duration-200"
+              className="ml-5 px-7 py-3 rounded-lg bg-gradient-to-r from-accent to-accent-dark text-navy-900 text-base font-bold hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all duration-200"
             >
               Register Now
             </a>
