@@ -1,0 +1,62 @@
+/**
+ * Custom SCA Sports logo — a stylised running figure inside a shield/flame shape.
+ * Used in Navbar, Footer, and exported as favicon.
+ */
+export default function Logo({ size = 36, className = '' }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      {/* Shield / flame shape */}
+      <path
+        d="M32 4C22 4 14 10 10 20c-2 6-2 12 0 18 3 8 10 14 18 20a4 4 0 004 0c8-6 15-12 18-20 2-6 2-12 0-18C46 10 42 4 32 4z"
+        fill="url(#shield-grad)"
+      />
+      {/* Inner glow */}
+      <path
+        d="M32 10c-7 0-13 4-16 12-1.5 4.5-1.5 9 0 13.5 2 6 7 10 13 15a2 2 0 003 0c6-5 11-9 13-15 1.5-4.5 1.5-9 0-13.5C42 14 39 10 32 10z"
+        fill="url(#inner-grad)"
+        opacity="0.3"
+      />
+      {/* Running figure */}
+      <g transform="translate(19, 16)" fill="#0a1128">
+        {/* Head */}
+        <circle cx="16" cy="3.5" r="3.5" />
+        {/* Body / torso */}
+        <path
+          d="M14 8l-3 10h2.5l1.5-5 3 5h3l-4-7 2-3h-5z"
+          fillRule="evenodd"
+        />
+        {/* Front leg (extended) */}
+        <path d="M11 18l-5 8h3l4-6 1-2h-3z" />
+        {/* Back leg (pushing off) */}
+        <path d="M17.5 18l4 8h-3l-3-6-.5-2h2.5z" />
+        {/* Front arm */}
+        <path d="M10 10l-4 5h2.5l3-3.5L10 10z" />
+        {/* Back arm */}
+        <path d="M19 10l4-2-.5 2.5-3.5 1V10z" />
+      </g>
+      {/* Speed lines */}
+      <g stroke="#0a1128" strokeWidth="1.5" strokeLinecap="round" opacity="0.5">
+        <line x1="14" y1="30" x2="8" y2="30" />
+        <line x1="16" y1="34" x2="9" y2="34" />
+        <line x1="14" y1="38" x2="10" y2="38" />
+      </g>
+      <defs>
+        <linearGradient id="shield-grad" x1="10" y1="4" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#fbbf24" />
+          <stop offset="100%" stopColor="#d97706" />
+        </linearGradient>
+        <linearGradient id="inner-grad" x1="16" y1="10" x2="48" y2="50" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#fbbf24" />
+        </linearGradient>
+      </defs>
+    </svg>
+  )
+}
