@@ -66,7 +66,7 @@ function AnimatedHeadline({ text, highlight, suffix }) {
     <motion.h1
       initial="hidden"
       animate="visible"
-      className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-8"
+      className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-5"
     >
       {letters.map((ch, i) => (
         <motion.span
@@ -158,13 +158,13 @@ export default function Hero() {
       <SportsParticles count={30} />
 
       {/* Content with scroll fade */}
-      <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
+      <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: 'backOut' }}
-          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 mb-10"
+          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 mb-6"
         >
           <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
             <Flame className="w-5 h-5 text-accent" />
@@ -180,7 +180,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 max-w-3xl mx-auto mb-14 font-medium shimmer-text"
+          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 max-w-3xl mx-auto mb-10 font-medium shimmer-text"
         >
           Unleash Your Potential on the Track.
         </motion.p>
@@ -190,7 +190,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.0 }}
-          className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-14"
+          className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-10"
         >
           <CountdownUnit value={timeLeft.days} label="Days" />
           <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
