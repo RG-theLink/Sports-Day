@@ -30,7 +30,7 @@ function CountdownUnit({ value, label }) {
   return (
     <div className="flex flex-col items-center">
       <div className="relative" style={{ perspective: '500px' }}>
-        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-navy-700/80 border border-white/10 flex items-center justify-center backdrop-blur-sm overflow-hidden">
+        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-xl bg-navy-700/80 border border-white/10 flex items-center justify-center backdrop-blur-sm overflow-hidden">
           <AnimatePresence mode="popLayout">
             <motion.span
               key={value}
@@ -38,7 +38,7 @@ function CountdownUnit({ value, label }) {
               animate={{ rotateX: 0, opacity: 1 }}
               exit={{ rotateX: 90, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="text-2xl sm:text-3xl font-bold tabular-nums text-white block"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tabular-nums text-white block"
             >
               {String(value).padStart(2, '0')}
             </motion.span>
@@ -47,9 +47,9 @@ function CountdownUnit({ value, label }) {
           <div className="absolute inset-x-0 top-1/2 h-px bg-white/5" />
         </div>
         {/* Subtle glow */}
-        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-12 h-4 bg-accent/10 rounded-full blur-lg" />
+        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-accent/10 rounded-full blur-lg" />
       </div>
-      <span className="mt-3 text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-[0.2em]">
+      <span className="mt-3 text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-[0.2em]">
         {label}
       </span>
     </div>
@@ -66,7 +66,7 @@ function AnimatedHeadline({ text, highlight, suffix }) {
     <motion.h1
       initial="hidden"
       animate="visible"
-      className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-6"
+      className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-8"
     >
       {letters.map((ch, i) => (
         <motion.span
@@ -131,7 +131,7 @@ function MagneticButton({ children, href }) {
       animate={{ x: offset.x, y: offset.y }}
       transition={{ type: 'spring', stiffness: 250, damping: 20 }}
       whileTap={{ scale: 0.96 }}
-      className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent to-accent-dark text-navy-900 font-bold text-lg shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-shadow duration-300 relative overflow-hidden group"
+      className="inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-gradient-to-r from-accent to-accent-dark text-navy-900 font-bold text-lg sm:text-xl shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-shadow duration-300 relative overflow-hidden group"
     >
       {/* Shimmer sweep */}
       <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
@@ -158,18 +158,18 @@ export default function Hero() {
       <SportsParticles count={30} />
 
       {/* Content with scroll fade */}
-      <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20">
+      <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: 'backOut' }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8"
+          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 mb-10"
         >
           <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
-            <Flame className="w-4 h-4 text-accent" />
+            <Flame className="w-5 h-5 text-accent" />
           </motion.div>
-          <span className="text-sm font-semibold text-accent">7 March 2026 • Vineta South Athletics Stadium</span>
+          <span className="text-sm sm:text-base font-semibold text-accent">7 March 2026 • Vineta South Athletics Stadium</span>
         </motion.div>
 
         {/* Animated headline */}
@@ -180,7 +180,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-2xl mx-auto mb-12 font-medium shimmer-text"
+          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 max-w-3xl mx-auto mb-14 font-medium shimmer-text"
         >
           Unleash Your Potential on the Track.
         </motion.p>
@@ -190,14 +190,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.0 }}
-          className="flex items-center justify-center gap-3 sm:gap-5 mb-12"
+          className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-14"
         >
           <CountdownUnit value={timeLeft.days} label="Days" />
-          <span className="text-2xl text-gray-600 font-light mt-[-1.5rem]">:</span>
+          <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.hours} label="Hours" />
-          <span className="text-2xl text-gray-600 font-light mt-[-1.5rem]">:</span>
+          <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.minutes} label="Min" />
-          <span className="text-2xl text-gray-600 font-light mt-[-1.5rem]">:</span>
+          <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.seconds} label="Sec" />
         </motion.div>
 
@@ -222,7 +222,7 @@ export default function Hero() {
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
           >
             <a href="#about" className="text-gray-500 hover:text-accent transition-colors">
-              <ChevronDown className="w-6 h-6" />
+              <ChevronDown className="w-7 h-7" />
             </a>
           </motion.div>
         </motion.div>

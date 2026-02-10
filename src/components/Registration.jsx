@@ -55,7 +55,7 @@ export default function Registration() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="mx-auto mt-2 mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-accent to-accent-light origin-left"
           />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg sm:text-xl">
             Registration is quick and easy through our Google Form. Don't miss out — sign up today!
           </p>
         </motion.div>
@@ -78,15 +78,15 @@ export default function Registration() {
               {/* Top accent bar */}
               <div className="h-1 bg-gradient-to-r from-accent via-accent-light to-accent animated-bar" />
 
-              <div className="p-8 sm:p-10 lg:p-12">
+              <div className="p-8 sm:p-10 lg:p-14">
                 {/* Icon header */}
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
-                    <ClipboardList className="w-7 h-7 text-navy-900" />
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
+                    <ClipboardList className="w-8 h-8 text-navy-900" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-extrabold">How to Register</h3>
-                    <p className="text-gray-400 text-sm">Complete the form to secure your spot</p>
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold">How to Register</h3>
+                    <p className="text-gray-400 text-sm sm:text-base">Complete the form to secure your spot</p>
                   </div>
                 </div>
 
@@ -139,14 +139,14 @@ export default function Registration() {
                 </div>
 
                 {/* Fee highlight */}
-                <div className="rounded-2xl bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 border-2 border-accent/40 p-6 mb-8 text-center">
-                  <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-2">Entry Fee</p>
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <DollarSign className="w-8 h-8 text-accent" />
-                    <span className="text-5xl sm:text-6xl font-black gradient-text">N$20</span>
+                <div className="rounded-2xl bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 border-2 border-accent/40 p-8 mb-10 text-center">
+                  <p className="text-sm sm:text-base font-semibold text-accent uppercase tracking-widest mb-3">Entry Fee</p>
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <DollarSign className="w-9 h-9 text-accent" />
+                    <span className="text-6xl sm:text-7xl font-black gradient-text">N$20</span>
                   </div>
-                  <p className="text-base font-semibold text-white mb-1">per person</p>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-lg font-semibold text-white mb-1.5">per person</p>
+                  <p className="text-sm sm:text-base text-gray-400">
                     For outside parties &amp; visitors. SCA students participate <span className="text-accent font-bold">free of charge</span>.
                   </p>
                 </div>
@@ -209,7 +209,7 @@ export default function Registration() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
-                    className="relative flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-gradient-to-r from-accent to-accent-dark text-navy-900 font-bold text-lg hover:shadow-xl hover:shadow-accent/30 transition-all duration-300 overflow-hidden group"
+                    className="relative flex items-center justify-center gap-3 w-full py-5 rounded-xl bg-gradient-to-r from-accent to-accent-dark text-navy-900 font-bold text-lg sm:text-xl hover:shadow-xl hover:shadow-accent/30 transition-all duration-300 overflow-hidden group"
                   >
                     {/* Shimmer sweep */}
                     <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />

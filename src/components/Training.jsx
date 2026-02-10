@@ -29,7 +29,7 @@ export default function Training() {
       <TrackCanvas className="opacity-60" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: visual card */}
           <motion.div
             initial={{ opacity: 0, x: -50, rotateY: -5 }}
@@ -39,7 +39,7 @@ export default function Training() {
             className="relative"
           >
             <div className="absolute -inset-1 bg-gradient-to-r from-accent/20 to-blue-500/20 rounded-3xl blur-2xl animate-pulse-glow" />
-            <div className="relative rounded-2xl bg-gradient-to-br from-navy-700/90 to-navy-800/90 border border-white/10 p-8 sm:p-10 overflow-hidden backdrop-blur-sm">
+            <div className="relative rounded-2xl bg-gradient-to-br from-navy-700/90 to-navy-800/90 border border-white/10 p-8 sm:p-10 lg:p-12 overflow-hidden backdrop-blur-sm">
               {/* Decorative circles */}
               <div className="absolute -top-12 -right-12 w-40 h-40 bg-accent/10 rounded-full blur-2xl" />
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl" />
@@ -53,12 +53,12 @@ export default function Training() {
                   <Dumbbell className="w-8 h-8 text-navy-900" />
                 </motion.div>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold mb-3">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4">
                   Get Ready for the{' '}
                   <span className="gradient-text">Big Day!</span>
                 </h3>
 
-                <p className="text-gray-400 text-lg mb-8">
+                <p className="text-gray-400 text-lg sm:text-xl mb-8">
                   Join our weekly training sessions to prepare for the Athletics event.
                   All skill levels are welcome — from first-timers to seasoned athletes.
                 </p>
@@ -126,7 +126,7 @@ export default function Training() {
               <span className="gradient-text">the Big Day</span>
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 text-lg sm:text-xl leading-relaxed">
               Our weekly practice sessions are all about getting students warmed up,
               familiar with the events, and ready to perform their best on Athletics day.
               No pressure — just preparation.
@@ -144,7 +144,7 @@ export default function Training() {
                   initial={{ opacity: 0, x: 30 }}
                   animate={listInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex items-center gap-3 text-gray-300"
+                  className="flex items-center gap-3 text-gray-300 text-base sm:text-lg"
                 >
                   <motion.div whileHover={{ x: 4 }} transition={{ duration: 0.15 }}>
                     <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />

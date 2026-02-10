@@ -60,7 +60,7 @@ export default function FutureEvents() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="mx-auto mt-2 mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-accent to-accent-light origin-center"
           />
-          <p className="text-gray-400 max-w-xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-xl mx-auto text-lg sm:text-xl">
             Athletics is just the beginning. Stay tuned for more exciting
             tournaments on the SCA Sports calendar.
           </p>
@@ -78,7 +78,7 @@ export default function FutureEvents() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -8, scale: 1.03, transition: { duration: 0.2 } }}
-                className="group flex-1 w-full sm:w-auto rounded-2xl bg-navy-700/40 border border-white/5 hover:border-accent/20 p-8 text-center transition-colors duration-300 relative overflow-hidden"
+                className="group flex-1 w-full sm:w-auto rounded-2xl bg-navy-700/40 border border-white/5 hover:border-accent/20 p-8 sm:p-10 text-center transition-colors duration-300 relative overflow-hidden"
               >
                 {/* Hover glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -90,12 +90,12 @@ export default function FutureEvents() {
                   <motion.div
                     animate={event.float}
                     transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${event.color} flex items-center justify-center mx-auto mb-4 shadow-lg`}
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${event.color} flex items-center justify-center mx-auto mb-5 shadow-lg`}
                   >
-                    <Icon className="w-7 h-7 text-white" />
+                    <Icon className="w-8 h-8 text-white" />
                   </motion.div>
-                  <h3 className="text-xl font-bold mb-3">{event.name}</h3>
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 text-gray-400 text-sm font-medium shimmer-badge">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3">{event.name}</h3>
+                  <span className="inline-block px-5 py-2 rounded-full bg-white/5 text-gray-400 text-sm sm:text-base font-medium shimmer-badge">
                     {event.status}
                   </span>
                 </div>

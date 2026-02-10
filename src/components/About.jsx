@@ -118,7 +118,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="mx-auto mt-2 mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-accent to-accent-light origin-left"
           />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg sm:text-xl">
             The SCA School Athletics 2026 invites students from all schools and age groups
             to compete — plus an <strong className="text-white font-semibold">"Open Age"</strong> category
             for parents who want to join the action.
@@ -131,13 +131,13 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {details.map((item) => {
             const Icon = item.icon
             return (
               <motion.div key={item.title} variants={cardVariants}>
-                <TiltCard className="group relative rounded-2xl bg-navy-700/40 border border-white/5 p-6 hover:border-accent/30 transition-colors duration-300 overflow-hidden h-full">
+                <TiltCard className="group relative rounded-2xl bg-navy-700/40 border border-white/5 p-7 sm:p-8 hover:border-accent/30 transition-colors duration-300 overflow-hidden h-full">
                   {/* Glow on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   {/* Spotlight effect */}
@@ -146,12 +146,12 @@ export default function About() {
                   <div className="relative z-10">
                     <motion.div
                       whileHover={{ rotate: [0, -10, 10, 0], transition: { duration: 0.5 } }}
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 shadow-lg`}
+                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-5 shadow-lg`}
                     >
-                      <Icon className="w-6 h-6 text-white" />
+                      <Icon className="w-7 h-7 text-white" />
                     </motion.div>
-                    <p className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-1">{item.title}</p>
-                    <p className="text-lg font-bold text-white">{item.value}</p>
+                    <p className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-1.5">{item.title}</p>
+                    <p className="text-lg sm:text-xl font-bold text-white">{item.value}</p>
                   </div>
                 </TiltCard>
               </motion.div>

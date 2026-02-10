@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/5">
       <div className="absolute inset-0 bg-navy-900" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,9 +15,9 @@ export default function Footer() {
           className="flex flex-col sm:flex-row items-center justify-between gap-6"
         >
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <Logo size={32} />
-            <span className="text-lg font-bold">
+          <div className="flex items-center gap-2.5">
+            <Logo size={36} />
+            <span className="text-lg sm:text-xl font-bold">
               SCA <span className="text-accent">Sports</span>
             </span>
           </div>

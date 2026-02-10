@@ -32,31 +32,31 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-18 sm:h-22">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#" className="flex items-center gap-2.5 group">
             <div className="group-hover:scale-110 transition-transform">
-              <Logo size={36} />
+              <Logo size={40} />
             </div>
-            <span className="text-xl font-bold tracking-tight">
+            <span className="text-xl sm:text-2xl font-bold tracking-tight">
               SCA <span className="text-accent">Sports</span>
             </span>
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1.5">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200"
+                className="px-4 py-2 rounded-lg text-sm sm:text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#register"
-              className="ml-3 px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-dark text-navy-900 text-sm font-bold hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all duration-200"
+              className="ml-4 px-6 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-dark text-navy-900 text-sm sm:text-base font-bold hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all duration-200"
             >
               Register Now
             </a>
