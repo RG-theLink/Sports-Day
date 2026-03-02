@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import { ClipboardList, ExternalLink, DollarSign, FileText, Wallet, MapPin, Mail, Phone } from 'lucide-react'
 import ParticleCanvas from './ParticleCanvas'
 
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/your-form-id/viewform'
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor'
 
 const stepVariants = {
   hidden: { opacity: 0, x: -30 },

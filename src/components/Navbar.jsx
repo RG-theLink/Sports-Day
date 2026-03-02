@@ -55,7 +55,9 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#register"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-5 px-7 py-3 rounded-lg bg-gradient-to-r from-accent to-accent-dark text-navy-900 text-base font-bold hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all duration-200"
             >
               Register Now
@@ -94,7 +96,9 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#register"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="block mt-2 px-4 py-3 rounded-lg bg-gradient-to-r from-accent to-accent-dark text-navy-900 text-center font-bold"
               >

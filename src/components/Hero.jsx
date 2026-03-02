@@ -110,7 +110,7 @@ function AnimatedHeadline({ text, highlight, suffix }) {
 }
 
 /* ---- Magnetic CTA button ---- */
-function MagneticButton({ children, href }) {
+function MagneticButton({ children, href, ...props }) {
   const ref = useRef(null)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
 
@@ -126,6 +126,7 @@ function MagneticButton({ children, href }) {
     <motion.a
       ref={ref}
       href={href}
+      {...props}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       animate={{ x: offset.x, y: offset.y }}
@@ -207,7 +208,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.2 }}
         >
-          <MagneticButton href="#register">Sign Up Now</MagneticButton>
+          <MagneticButton href="https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Sign Up Now</MagneticButton>
         </motion.div>
 
         {/* Scroll indicator */}
