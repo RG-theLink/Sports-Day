@@ -64,10 +64,10 @@ export default function Footer() {
 
           {/* Bottom row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 text-sm flex items-center gap-1">
-              © 2026 SCA Sports. Made with{' '}
-              <Heart className="w-3.5 h-3.5 text-red-500 inline fill-red-500" />{' '}
-              for student athletes.
+            <p className="text-gray-500 text-sm inline-flex flex-wrap items-center justify-center gap-1">
+              <span>© 2026 SCA Sports. Made with</span>
+              <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+              <span>for student athletes.</span>
             </p>
             <p className="text-gray-600 text-xs">
               Designed by <span className="text-gray-400 font-medium">Dynamic Odyssey</span>
