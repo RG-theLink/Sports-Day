@@ -30,7 +30,7 @@ function CountdownUnit({ value, label }) {
   return (
     <div className="flex flex-col items-center">
       <div className="relative" style={{ perspective: '500px' }}>
-        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-xl bg-navy-700/80 border border-white/10 flex items-center justify-center backdrop-blur-sm overflow-hidden">
+        <div className="w-16 h-16 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-xl bg-navy-700/80 border border-white/10 flex items-center justify-center backdrop-blur-sm overflow-hidden">
           <AnimatePresence mode="popLayout">
             <motion.span
               key={value}
@@ -38,7 +38,7 @@ function CountdownUnit({ value, label }) {
               animate={{ rotateX: 0, opacity: 1 }}
               exit={{ rotateX: 90, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold tabular-nums text-white block"
+              className="text-2xl sm:text-4xl lg:text-5xl font-bold tabular-nums text-white block"
             >
               {String(value).padStart(2, '0')}
             </motion.span>
@@ -47,9 +47,9 @@ function CountdownUnit({ value, label }) {
           <div className="absolute inset-x-0 top-1/2 h-px bg-white/5" />
         </div>
         {/* Subtle glow */}
-        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-accent/10 rounded-full blur-lg" />
+        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-12 sm:w-16 h-5 bg-accent/10 rounded-full blur-lg" />
       </div>
-      <span className="mt-3 text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-[0.2em]">
+      <span className="mt-2 sm:mt-3 text-[10px] sm:text-sm font-semibold text-gray-500 uppercase tracking-[0.2em]">
         {label}
       </span>
     </div>
@@ -191,14 +191,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.0 }}
-          className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-10"
+          className="flex items-center justify-center gap-2 sm:gap-6 lg:gap-8 mb-10"
         >
           <CountdownUnit value={timeLeft.days} label="Days" />
-          <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
+          <span className="text-xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.hours} label="Hours" />
-          <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
+          <span className="text-xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.minutes} label="Min" />
-          <span className="text-3xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
+          <span className="text-xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.seconds} label="Sec" />
         </motion.div>
 
