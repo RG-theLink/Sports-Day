@@ -6,7 +6,7 @@ import Logo from './Logo'
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Training', href: '#training' },
-  { label: 'Register', href: '#register' },
+  // { label: 'Register', href: '#register' }, // COMMENTED OUT – reactivate for next event
   { label: 'Events', href: '#events' },
 ]
 
@@ -54,6 +54,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            {/* COMMENTED OUT – reactivate Register Now button for next event
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor"
               target="_blank"
@@ -62,6 +63,7 @@ export default function Navbar() {
             >
               Register Now
             </a>
+            */}
           </div>
 
           {/* Mobile Toggle */}
@@ -95,6 +97,7 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+              {/* COMMENTED OUT – reactivate Register Now button for next event
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor"
                 target="_blank"
@@ -104,6 +107,7 @@ export default function Navbar() {
               >
                 Register Now
               </a>
+              */}
             </div>
           </motion.div>
         )}

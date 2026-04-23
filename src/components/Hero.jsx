@@ -170,11 +170,11 @@ export default function Hero() {
           <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
             <Flame className="w-5 h-5 text-accent" />
           </motion.div>
-          <span className="text-sm sm:text-base font-semibold text-accent">7 March 2026 • Vineta South Athletics Stadium</span>
+          <span className="text-sm sm:text-base font-semibold text-accent">Soccer &amp; Netball • Coming Soon</span>
         </motion.div>
 
         {/* Animated headline */}
-        <AnimatedHeadline text="SCA School " highlight="Athletics" suffix=" 2026" />
+        <AnimatedHeadline text="SCA Sports: More Action " highlight="Coming Soon" suffix="" />
 
         {/* Sub-headline with shimmer */}
         <motion.p
@@ -183,10 +183,11 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.8 }}
           className="text-xl sm:text-2xl lg:text-3xl text-gray-400 max-w-3xl mx-auto mb-10 font-medium shimmer-text"
         >
-          Unleash Your Potential on the Track.
+          Athletics was just the start. We are currently preparing for our upcoming Soccer and Netball tournaments. Stay tuned for dates and registration details.
         </motion.p>
 
         {/* Countdown */}
+        {/* ── COUNTDOWN COMMENTED OUT – reactivate for next event ──
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -201,8 +202,10 @@ export default function Hero() {
           <span className="text-xl sm:text-4xl text-gray-600 font-light mt-[-1.5rem]">:</span>
           <CountdownUnit value={timeLeft.seconds} label="Sec" />
         </motion.div>
+        ── END COUNTDOWN ── */}
 
         {/* CTA */}
+        {/* ── CTA BUTTON COMMENTED OUT – reactivate for next event ──
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -210,6 +213,7 @@ export default function Hero() {
         >
           <MagneticButton href="https://docs.google.com/forms/d/e/1FAIpQLScu96SAr0Zj8NPQXASL7lM9Lgy4Pug0I-yv9oO85sJRHT033Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Sign Up Now</MagneticButton>
         </motion.div>
+        ── END CTA BUTTON ── */}
 
         {/* Scroll indicator */}
         <motion.div
@@ -222,7 +226,7 @@ export default function Hero() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <a href="#about" className="text-gray-500 hover:text-accent transition-colors">
+            <a href="#events" className="text-gray-500 hover:text-accent transition-colors">
               <ChevronDown className="w-7 h-7" />
             </a>
           </motion.div>

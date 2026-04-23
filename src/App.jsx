@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About'
-import Training from './components/Training'
-import Registration from './components/Registration'
+// import About from './components/About'
+// import Training from './components/Training'
+// import Registration from './components/Registration'
 import FutureEvents from './components/FutureEvents'
 import Footer from './components/Footer'
 
@@ -12,9 +12,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        {/* ── COMMENTED OUT FOR 'COMING SOON' STATE ── REACTIVATE FOR NEXT EVENT ──
         <About />
         <Training />
         <Registration />
+        ── END COMMENTED SECTIONS ── */}
         <FutureEvents />
       </main>
       <Footer />
